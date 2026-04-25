@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 测试页面</title>
+    <style>
+        /* 简单的样式让页面看起来更舒服 */
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover { background-color: #0056b3; }
+        #output { margin-top: 20px; font-weight: bold; color: green; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Hello, World!</h1>
+    <p>这是一个用于测试的 HTML 页面。你可以在这里验证你的<strong>浏览器渲染</strong>或<strong>脚本功能</strong>。</p>
+
+    <h3>1. 列表测试</h3>
+    <ul>
+        <li>前端 (HTML/CSS/JS)</li>
+        <li>后端 (Node.js/Python/Go)</li>
+        <li>数据库 (MySQL/MongoDB)</li>
+    </ul>
+
+    <h3>2. 交互测试</h3>
+    <p>点击下方按钮测试 JavaScript：</p>
+    <button class="btn" onclick="showMessage()">点我试试</button>
+    <p id="output"></p>
+
+    <h3>3. 表单元素测试</h3>
+    <form onsubmit="return false;">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" placeholder="请输入姓名">
+        <br><br>
+        <label>
+            <input type="checkbox"> 我已阅读并同意测试条款
+        </label>
+    </form>
+</div>
+
+<script>
+    function showMessage() {
+        const output = document.getElementById('output');
+        const now = new Date();
+        output.innerText = "按钮点击成功！当前时间：" + now.toLocaleTimeString();
+        console.log("测试按钮被点击了，时间：" + now);
+    }
+</script>
+
+</body>
+</html>
